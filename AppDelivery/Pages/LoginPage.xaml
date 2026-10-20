@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.LoginPage"
+             Title="">
+
+    <Border WidthRequest="350" HeightRequest="600" StrokeShape="RoundRectangle 15"
+            VerticalOptions="Center" Padding="30">
+
+        <VerticalStackLayout Spacing="15">
+
+            <Image Source="logo.png" WidthRequest="100"/>
+            <Label Text="Login" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Preencha os campos" FontSize="14" TextColor="Gray" HorizontalOptions="Center"/>
+
+            <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email" WidthRequest="280"/>
+
+            <Grid ColumnDefinitions="*,Auto" Margin="30,0,0,0">
+                <Entry x:Name="txtSenha" Placeholder="Senha" IsPassword="True" WidthRequest="280"/>
+                <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
+            </Grid>
+
+            <Button Text="Acessar" FontAttributes="Bold" FontSize="16" Clicked="Button_Clicked"/>
+
+            <Label Text="Esqueci Minha Senha" TextDecorations="Underline" FontAttributes="Bold"
+                   TextColor="{StaticResource Primary}" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="EsqueciSenha_Click"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Border HeightRequest="50" StrokeShape="RoundRectangle 10" Margin="0,40,0,0">
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="5">
+                    <Label Text="Não tem uma conta?"/>
+
+                    <Label Text="Criar Conta" TextDecorations="Underline" FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CriarContaClick"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

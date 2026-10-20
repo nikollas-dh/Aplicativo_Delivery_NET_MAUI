@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.CadastroPage"
+             Title="">
+    <Border WidthRequest="350" StrokeShape="RoundRectangle 15" VerticalOptions="Center" Padding="30" >
+        <VerticalStackLayout Spacing="15">
+            <Label Text="Cadastro" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Preencha os campos" FontSize="14" TextColor="Gray" HorizontalOptions="Center"/>
+
+            <Entry x:Name="txtNome" Placeholder="Nome Completo"/>
+            <Entry x:Name="txtEmail" Placeholder="E-mail"/>
+
+            <Grid ColumnDefinitions="*,Auto" Margin="55,0,0,0">
+                <Entry x:Name="txtSenha" Placeholder="Senha" IsPassword="True" WidthRequest="300"/>
+                <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
+            </Grid>
+            <Grid ColumnDefinitions="*,Auto" Margin="55,0,0,0">
+                <Entry x:Name="txtConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True" WidthRequest="300"/>
+                <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
+            </Grid>
+            <Entry x:Name="txtTipoUsuario" Placeholder="Tipo Usuário"/>
+            <Entry x:Name="txtFrase" Placeholder="Frase Secreta"/>
+            <Entry x:Name="txtResposta" Placeholder="Resposta Frase Secreta"/>
+            <Button Text="Cadastrar" FontSize="16" FontAttributes="Bold" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.EsqueciSenhaPage"
+             Title="">
+    <Border WidthRequest="350" VerticalOptions="Center" Padding="30" StrokeShape="RoundRectangle 15">
+        <VerticalStackLayout Spacing="15">
+            <Label Text="Esqueci minha senha" HorizontalOptions="Center" FontAttributes="Bold" FontSize="24"/>
+            <Label Text="Preencha os campos" TextColor="Gray" HorizontalOptions="Center"/>
+
+            <Entry Placeholder="email@provedor.com" x:Name="txtEmail"/>
+            <Entry Placeholder="Qual o nome da sua mãe?" x:Name="txtMae"/>
+            <Entry Placeholder="Resposta Frase Secreta" x:Name="txtResposta"/>
+            <Grid ColumnDefinitions="*,Auto" Margin="55,0,0,0">
+                <Entry x:Name="txtSenha" Placeholder="Senha" IsPassword="True" WidthRequest="300"/>
+                <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
+            </Grid>
+            <Grid ColumnDefinitions="*,Auto" Margin="55,0,0,0">
+                <Entry x:Name="txtConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True" WidthRequest="300"/>
+                <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
+            </Grid>
+
+            <Button Text="Alterar Senha" FontAttributes="Bold" FontSize="16" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>
