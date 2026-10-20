@@ -1,4 +1,4 @@
-# 🚚 Aplicativo de Delivery
+# Aplicativo de Delivery
 
 Aplicativo de delivery simples desenvolvido com **.NET MAUI** para a interface mobile e **ASP.NET** para o backend e a comunicação com o servidor. O sistema permite o gerenciamento e o acompanhamento de pedidos de acordo com o perfil de cada usuário: cliente, entregador (motoqueiro) e administrador.
 
@@ -25,7 +25,7 @@ Aplicativo de delivery simples desenvolvido com **.NET MAUI** para a interface m
 * Listar e visualizar os pedidos cadastrados no sistema.
 * Acompanhar os pedidos para auxiliar no gerenciamento das entregas.
 
-## 🧰 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * **.NET MAUI:** desenvolvimento da aplicação mobile multiplataforma.
 * **C#:** linguagem utilizada no desenvolvimento do aplicativo e do backend.
@@ -44,7 +44,7 @@ O sistema é dividido em duas partes principais:
 
 O aplicativo realiza requisições HTTP para a API ASP.NET, que processa as operações e retorna os dados em formato JSON.
 
-## 🔄 Fluxo básico de funcionamento
+## Fluxo básico de funcionamento
 
 1. O usuário realiza o cadastro ou efetua login.
 2. O sistema identifica o perfil de acesso: cliente, entregador ou administrador.
@@ -99,7 +99,7 @@ Evite utilizar `localhost` indiscriminadamente no aplicativo mobile, pois ele po
 
 Abra a solução no Visual Studio, selecione o projeto MAUI como projeto de inicialização, escolha o dispositivo ou emulador e execute a aplicação.
 
-## 🔒 Controle de acesso
+## Controle de acesso
 
 As funcionalidades devem respeitar o perfil autenticado:
 
