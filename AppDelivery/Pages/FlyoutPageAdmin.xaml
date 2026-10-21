@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.FlyoutPageAdmin"
+             Title="FlyoutPageAdmin"
+            xmlns:pages="clr-namespace:AppDelivery.Pages"
+            FlyoutLayoutBehavior="Split"
+            
+            >
+
+    <FlyoutPage.Flyout>
+        <pages:Menu/>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage BarBackgroundColor="#D4A017" BarTextColor="White">
+            <x:Arguments>
+                <pages:HomeAdmin />
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+       
+</FlyoutPage>

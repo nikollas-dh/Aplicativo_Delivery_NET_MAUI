@@ -66,6 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Icones\checklist.png" />
+	  <None Remove="Resources\Icones\config1.png" />
+	  <None Remove="Resources\Icones\logout1.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 	</ItemGroup>
@@ -74,15 +80,49 @@
 	  <MauiXaml Update="Pages\CadastroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\ConfiguracoesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\EsqueciSenhaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\FlyoutPageAdmin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\FlyoutPageMotoboy.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\FlyoutPageUsuario.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\HomeAdmin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ListarPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Menu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\SplashPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Icones\block.png" />
+	  <MauiImage Include="Resources\Icones\checklist.png" />
+	  <MauiImage Include="Resources\Icones\config.png" />
+	  <MauiImage Include="Resources\Icones\config1.png" />
+	  <MauiImage Include="Resources\Icones\eye1.png" />
+	  <MauiImage Include="Resources\Icones\eye_off1.png" />
+	  <MauiImage Include="Resources\Icones\home.png" />
+	  <MauiImage Include="Resources\Icones\logout.png" />
+	  <MauiImage Include="Resources\Icones\logout1.png" />
+	  <MauiImage Include="Resources\Icones\user1.png" />
 	</ItemGroup>
 
 </Project>

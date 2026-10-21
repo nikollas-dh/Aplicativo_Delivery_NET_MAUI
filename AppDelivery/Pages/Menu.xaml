@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.Menu"
+             Title="Menu"
+             BackgroundColor="#FFFAF0">
+    <VerticalStackLayout>
+        <VerticalStackLayout Padding="0,60">
+            <Image Source="user1.png" HorizontalOptions="Center" />
+            <Label x:Name="lblNome" Text="Olá usuário" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblPerfil" Text="Administrador" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+        <HorizontalStackLayout Spacing="15" Padding="15,0" HeightRequest="48">
+            <Image Source="home.png" WidthRequest="24" />
+            <Label Text="Tela Principal" VerticalOptions="Center" />
+
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Spacing="15" Padding="15,0" HeightRequest="48">
+            <Image Source="checklist.png" WidthRequest="24" />
+            <Label Text="Listar Pedidos" VerticalOptions="Center" />
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Spacing="15" Padding="15,0" HeightRequest="48">
+            <Image Source="config1.png" WidthRequest="24" />
+            <Label Text="Configurações" VerticalOptions="Center" />
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Spacing="15" Padding="15,0" HeightRequest="48">
+            <Image Source="logout1.png" WidthRequest="24" />
+            <Label Text="Sair" VerticalOptions="Center" />
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+            </VerticalStackLayout>
+</ContentPage>

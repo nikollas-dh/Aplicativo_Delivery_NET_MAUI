@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.HomeAdmin"
+             Title="Administrador">
+    <VerticalStackLayout Padding="16" Spacing="16">
+        <Label Text="Visão Geral" FontSize="26" HorizontalOptions="Center" />
+        <Frame>
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="15" FontSize="32" />
+                    <Label Text="PENDENTES" />
+                </VerticalStackLayout>
+                <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#0066CC" />
+            </Grid>
+        </Frame>
+        <Frame>
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="35" FontSize="32" />
+                    <Label Text="ENTREGUES" />
+                </VerticalStackLayout>
+                <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#55AA55" />
+            </Grid>
+        </Frame>
+        <Frame>
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="10" FontSize="32" />
+                    <Label Text="EM TRÂNSITO" />
+                </VerticalStackLayout>
+                <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#E5C100" />
+            </Grid>
+        </Frame>
+        <Frame>
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout>
+                    <Label Text="2" FontSize="32" />
+                    <Label Text="CANCELADOS" />
+                </VerticalStackLayout>
+                <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#C96565" />
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
