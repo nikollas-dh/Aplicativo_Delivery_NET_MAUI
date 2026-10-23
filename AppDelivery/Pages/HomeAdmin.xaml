@@ -8,7 +8,7 @@
         <Frame>
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
-                    <Label Text="15" FontSize="32" />
+                    <Label x:Name="lblPendentes" FontSize="32" />
                     <Label Text="PENDENTES" />
                 </VerticalStackLayout>
                 <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#0066CC" />
@@ -17,7 +17,7 @@
         <Frame>
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
-                    <Label Text="35" FontSize="32" />
+                    <Label x:Name="lblEntregues" FontSize="32" />
                     <Label Text="ENTREGUES" />
                 </VerticalStackLayout>
                 <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#55AA55" />
@@ -26,7 +26,7 @@
         <Frame>
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
-                    <Label Text="10" FontSize="32" />
+                    <Label x:Name="lblEmTransito" FontSize="32" />
                     <Label Text="EM TRÂNSITO" />
                 </VerticalStackLayout>
                 <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#E5C100" />
@@ -35,7 +35,7 @@
         <Frame>
             <Grid ColumnDefinitions="*,Auto">
                 <VerticalStackLayout>
-                    <Label Text="2" FontSize="32" />
+                    <Label x:Name="lblCancelados" FontSize="32" />
                     <Label Text="CANCELADOS" />
                 </VerticalStackLayout>
                 <BoxView Grid.Column="1" WidthRequest="48" HeightRequest="48" Color="#C96565" />

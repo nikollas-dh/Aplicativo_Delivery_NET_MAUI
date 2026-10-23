@@ -23,7 +23,7 @@
             <Image Source="checklist.png" WidthRequest="24" />
             <Label Text="Listar Pedidos" VerticalOptions="Center" />
             <HorizontalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+                <TapGestureRecognizer Tapped="ListarPedidosClicked" />
             </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
         
@@ -31,7 +31,7 @@
             <Image Source="config1.png" WidthRequest="24" />
             <Label Text="Configurações" VerticalOptions="Center" />
             <HorizontalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+                <TapGestureRecognizer Tapped="ConfigClicked" />
             </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
         
@@ -39,7 +39,7 @@
             <Image Source="logout1.png" WidthRequest="24" />
             <Label Text="Sair" VerticalOptions="Center" />
             <HorizontalStackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnTelaPrincipalClicked" />
+                <TapGestureRecognizer Tapped="SairClicked" />
             </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
             </VerticalStackLayout>

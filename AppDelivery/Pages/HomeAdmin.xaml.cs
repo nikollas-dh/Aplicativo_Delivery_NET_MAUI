@@ -6,4 +6,14 @@ public partial class HomeAdmin : ContentPage
 	{
 		InitializeComponent();
 	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        CarregarDados();
+    }
+
+    private void CarregarDados()
+    {
+        
+    }
 }

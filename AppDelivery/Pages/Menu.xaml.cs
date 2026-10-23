@@ -11,4 +11,19 @@ public partial class Menu : ContentPage
     {
 
     }
+
+    private void ListarPedidosClicked(object sender, TappedEventArgs e)
+    {
+
+    }
+
+    private void ConfigClicked(object sender, TappedEventArgs e)
+    {
+
+    }
+
+    private void SairClicked(object sender, TappedEventArgs e)
+    {
+
+    }
 }
