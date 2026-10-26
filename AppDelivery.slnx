@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="AppDelivery/AppDelivery.csproj" />
+  <Project Path="AppDelivery/AppDelivery.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

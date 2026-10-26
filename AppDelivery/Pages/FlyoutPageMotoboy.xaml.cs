@@ -2,7 +2,7 @@ namespace AppDelivery.Pages;
 
 public partial class FlyoutPageMotoboy : FlyoutPage
 {
-	public FlyoutPageMotoboy()
+	public FlyoutPageMotoboy(Models.Usuario us)
 	{
 		InitializeComponent();
 	}

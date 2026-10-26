@@ -2,23 +2,12 @@ namespace AppDelivery.Pages;
 
 public partial class FlyoutPageAdmin : FlyoutPage
 {
-	public FlyoutPageAdmin()
+	public FlyoutPageAdmin(Models.Usuario us)
 	{
 		InitializeComponent();
-	}
-
-    private void Inicio_Clicked(object sender, EventArgs e)
-    {
-
+        Flyout = new Menu(us);
+        Detail = new NavigationPage(new HomeAdmin(us));
     }
 
-    private void Pedidos_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void Configuracoes_Clicked(object sender, EventArgs e)
-    {
-
-    }
+    
 }

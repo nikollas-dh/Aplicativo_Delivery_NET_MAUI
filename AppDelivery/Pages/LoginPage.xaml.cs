@@ -1,18 +1,49 @@
+using AppDelivery.Models;
+
 namespace AppDelivery.Pages;
 
 public partial class LoginPage : ContentPage
 {
-	public LoginPage()
+    Services api = new Services();
+
+    public LoginPage()
 	{
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new FlyoutPageAdmin();
+        Usuario us = new Usuario
+        {
+            Email = txtEmail.Text,
+            Senha = txtSenha.Text
+        };
+
+        var dados = await api.Login(us);
+
+        if (dados == null)
+        {
+            await DisplayAlert("Erro", "Login inválido!", "OK");
+            return;
+        }
+
+        us.IdUsuario = dados.Value.GetProperty("idUsuario").GetInt32();
+        us.Nome = dados.Value.GetProperty("nome").GetString()!;
+        us.Email = dados.Value.GetProperty("email").GetString()!;
+
+        string tipo = dados.Value.GetProperty("tipoUsuario").GetString()!;
+
+        if (tipo == "Administrador")
+            await Navigation.PushAsync(new FlyoutPageAdmin(us));
+
+        else if (tipo == "Cliente")
+            await Navigation.PushAsync(new FlyoutPageUsuario(us));
+
+        else if (tipo == "Entregador")
+            await Navigation.PushAsync(new FlyoutPageMotoboy(us));
     }
 
- 
+
 
     private void CriarContaClick(object sender, TappedEventArgs e)
     {

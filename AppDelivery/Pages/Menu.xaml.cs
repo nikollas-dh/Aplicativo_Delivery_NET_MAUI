@@ -2,7 +2,7 @@ namespace AppDelivery.Pages;
 
 public partial class Menu : ContentPage
 {
-	public Menu()
+	public Menu(Models.Usuario us)
 	{
 		InitializeComponent();
 	}

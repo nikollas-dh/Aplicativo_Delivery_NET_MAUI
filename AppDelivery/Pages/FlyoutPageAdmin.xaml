@@ -8,15 +8,6 @@
             
             >
 
-    <FlyoutPage.Flyout>
-        <pages:Menu/>
-    </FlyoutPage.Flyout>
-    <FlyoutPage.Detail>
-        <NavigationPage BarBackgroundColor="#D4A017" BarTextColor="White">
-            <x:Arguments>
-                <pages:HomeAdmin />
-            </x:Arguments>
-        </NavigationPage>
-    </FlyoutPage.Detail>
+   
        
 </FlyoutPage>
