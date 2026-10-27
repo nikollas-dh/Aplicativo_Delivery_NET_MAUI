@@ -4,10 +4,11 @@ namespace AppDelivery.Pages;
 
 public partial class Menu : ContentPage
 {
-	public Menu(Models.Usuario us)
+	public Menu(Models.Usuario us, string v)
 	{
 		InitializeComponent();
         CarregarDados(us);
+        lblPerfil.Text = v;
 	}
 
     private void CarregarDados(Usuario us)

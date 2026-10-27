@@ -98,6 +98,9 @@
 	  <MauiXaml Update="Pages\HomeAdmin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\HomeEntregador.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ListarPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

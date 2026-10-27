@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDelivery.Pages.HomeEntregador"
+             Title="Entregador">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+
+            <Label Text="Lista de Pedidos" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+            <CollectionView x:Name="cvPedidos">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame  
+                            BackgroundColor="#FFFAF0"
+                               CornerRadius="10" 
+                               Padding="15" 
+                               Margin="0, 5">
+
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="{Binding IdPedido, StringFormat='ID PEDIDO: {0}'}" FontAttributes="Bold" TextColor="Black"/>
+                                <Label Text="Em Trânsito" TextColor="Black"/>
+                            </VerticalStackLayout>
+
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
