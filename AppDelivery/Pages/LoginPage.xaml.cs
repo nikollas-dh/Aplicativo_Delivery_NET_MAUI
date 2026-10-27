@@ -31,7 +31,14 @@ public partial class LoginPage : ContentPage
         us.Nome = dados.Value.GetProperty("nome").GetString()!;
         us.Email = dados.Value.GetProperty("email").GetString()!;
 
-        string tipo = dados.Value.GetProperty("tipoUsuario").GetString()!;
+        string tipo = dados.Value.GetProperty("tipoUsuario").GetString();
+
+        //Application.Current.MainPage = tipo switch
+        //{
+        //    "Administrador" => new FlyoutPageAdmin(us, tipo),
+        //    "Cliente" => new FlyoutPageUsuario(us, tipo),
+        //    _ => new FlyoutPageMotoboy(us, tipo)
+        //};
 
         if (tipo == "Administrador")
             Application.Current.MainPage = new FlyoutPageAdmin(us, "Administrador");

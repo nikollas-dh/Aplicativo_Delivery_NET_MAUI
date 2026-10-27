@@ -10,64 +10,29 @@ namespace AppDelivery
     class Services
     {
         HttpClient client = new HttpClient();
-        //string urlBase = "http://192.168.0.1:5223/api";
         string urlBase = "http://10.0.2.2:5223/api";
+        //string urlBase = "http://192.168.0.1:5223/api";
 
+        public async Task<JsonElement?> Login(Usuario us)
+        {
+            var res = await client.PostAsJsonAsync($"{urlBase}/Usuario/login", us);
+            return res.IsSuccessStatusCode ? await res.Content.ReadFromJsonAsync<JsonElement>() : null;
+        }
         public async Task<int> ObterIdRestaurante(int idUsuario)
         {
             return await client.GetFromJsonAsync<int>($"{urlBase}/Admin/restaurante-por-admin/{idUsuario}");
         }
 
-        public async Task<(int pendentes, int entregues, int emTransito, int cancelados)>
-            ListarResumoAdmin(int idRestaurante)
+        public async Task<JsonElement> ListarResumoAdmin(int idRestaurante)
         {
-            var res = await client.GetFromJsonAsync<JsonElement>(
-                $"{urlBase}/Admin/resumo/{idRestaurante}");
-
-            return (
-                res.GetProperty("pendentes").GetInt32(),
-                res.GetProperty("entregues").GetInt32(),
-                res.GetProperty("emTransito").GetInt32(),
-                res.GetProperty("cancelados").GetInt32()
-            );
-        }
-
-        public async Task<JsonElement?> Login(Usuario us)
-        {
-            try
-            {
-                string api = $"{urlBase}/Usuario/login";
-
-                string json = JsonSerializer.Serialize(us);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var res = await client.PostAsync(api, content);
-
-                if (res.IsSuccessStatusCode)
-                {
-                    var resBody = await res.Content.ReadAsStringAsync();
-
-                    return JsonSerializer.Deserialize<JsonElement>(resBody);
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro no login: {ex.Message}");
-                return null;
-            }
+            return await client.GetFromJsonAsync<JsonElement>($"{urlBase}/Admin/resumo/{idRestaurante}");
         }
 
         public async Task<List<Pedido>> ListarPedidosUsuario(int id)
         {
             try
             {
-                var api = $"{urlBase}/Cliente/{id}";
-
-                var pedidos = await client.GetFromJsonAsync<List<Pedido>>(api);
-
-                return pedidos ?? new List<Pedido>();
+                return await client.GetFromJsonAsync<List<Pedido>>($"{urlBase}/Cliente/{id}");
             }
             catch (Exception ex)
             {
