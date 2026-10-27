@@ -13,6 +13,11 @@ namespace AppDelivery
         //string urlBase = "http://192.168.0.1:5223/api";
         string urlBase = "http://10.0.2.2:5223/api";
 
+        public async Task<int> ObterIdRestaurante(int idUsuario)
+        {
+            return await client.GetFromJsonAsync<int>($"{urlBase}/Admin/restaurante-por-admin/{idUsuario}");
+        }
+
         public async Task<(int pendentes, int entregues, int emTransito, int cancelados)>
             ListarResumoAdmin(int idRestaurante)
         {
@@ -26,7 +31,6 @@ namespace AppDelivery
                 res.GetProperty("cancelados").GetInt32()
             );
         }
-
 
         public async Task<JsonElement?> Login(Usuario us)
         {
@@ -71,12 +75,11 @@ namespace AppDelivery
                 return new List<Pedido>();
             }
         }
-        public async Task<List<Pedido>> ListarPedidosEntregador() 
+
+        public async Task<List<Pedido>> ListarPedidosEntregador()
         {
             var res = await client.GetFromJsonAsync<List<Pedido>>($"{urlBase}/Entregador");
             return res;
         }
-
-
     }
 }

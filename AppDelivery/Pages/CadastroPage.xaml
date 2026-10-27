@@ -19,7 +19,15 @@
                 <Entry x:Name="txtConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True" WidthRequest="300"/>
                 <ImageButton Grid.Column="1" Source="eye1.png" WidthRequest="10" />
             </Grid>
-            <Entry x:Name="txtTipoUsuario" Placeholder="Tipo Usuário"/>
+            <Picker Title="Perfil" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Administrador</x:String>
+                        <x:String>Cliente</x:String>
+                        <x:String>Entregador</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <Entry x:Name="txtFrase" Placeholder="Frase Secreta"/>
             <Entry x:Name="txtResposta" Placeholder="Resposta Frase Secreta"/>
             <Button Text="Cadastrar" FontSize="16" FontAttributes="Bold" Clicked="Button_Clicked"/>

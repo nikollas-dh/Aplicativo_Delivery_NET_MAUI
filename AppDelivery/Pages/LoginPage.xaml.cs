@@ -34,13 +34,13 @@ public partial class LoginPage : ContentPage
         string tipo = dados.Value.GetProperty("tipoUsuario").GetString()!;
 
         if (tipo == "Administrador")
-            await Navigation.PushAsync(new FlyoutPageAdmin(us));
+            Application.Current.MainPage = new FlyoutPageAdmin(us, "Administrador");
 
         else if (tipo == "Cliente")
-            await Navigation.PushAsync(new FlyoutPageUsuario(us));
+            Application.Current.MainPage = new FlyoutPageUsuario(us, "Cliente");
 
         else if (tipo == "Entregador")
-            await Navigation.PushAsync(new FlyoutPageMotoboy(us));
+            Application.Current.MainPage = new FlyoutPageMotoboy(us, "Entregador");
     }
 
 

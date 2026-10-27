@@ -11,4 +11,9 @@ public partial class CadastroPage : ContentPage
     {
 
     }
+
+    private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
