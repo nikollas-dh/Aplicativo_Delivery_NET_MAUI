@@ -35,5 +35,6 @@ public partial class HomeAdmin : ContentPage
         {
             await DisplayAlert("Erro de Conexão", $"Não foi possível carregar os dados: {ex.Message}", "OK");
         }
+
     }
 }

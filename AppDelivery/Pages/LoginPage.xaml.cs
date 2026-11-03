@@ -26,19 +26,11 @@ public partial class LoginPage : ContentPage
             await DisplayAlert("Erro", "Login inválido!", "OK");
             return;
         }
-
         us.IdUsuario = dados.Value.GetProperty("idUsuario").GetInt32();
         us.Nome = dados.Value.GetProperty("nome").GetString()!;
         us.Email = dados.Value.GetProperty("email").GetString()!;
 
         string tipo = dados.Value.GetProperty("tipoUsuario").GetString();
-
-        //Application.Current.MainPage = tipo switch
-        //{
-        //    "Administrador" => new FlyoutPageAdmin(us, tipo),
-        //    "Cliente" => new FlyoutPageUsuario(us, tipo),
-        //    _ => new FlyoutPageMotoboy(us, tipo)
-        //};
 
         if (tipo == "Administrador")
             Application.Current.MainPage = new FlyoutPageAdmin(us, "Administrador");
